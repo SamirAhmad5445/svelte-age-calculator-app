@@ -1,0 +1,75 @@
+/* self hosting font • Poppins */
+@import url("./assets/font-family-poppins.css");
+
+:root {
+  /* colors custom props */
+  --clr-purple: #854dff;
+  --clr-red: #ff5757;
+  --clr-white-1: #ffffff;
+  --clr-white-2: #f0f0f0;
+  --clr-grey-1: #dbdbdb;
+  --clr-grey-2: #716f6f;
+  --clr-black: #141414;
+
+  /* text colors */
+  --text-body: var(--clr-black);
+  --text-accent: var(--clr-purple);
+  --text-reversed: var(--clr-white-1);
+  --text-muted: var(--clr-grey-2);
+  --text-error: var(--clr-red);
+
+  /* background colors */
+  --bg-app: var(--clr-white-1);
+  --bg-body: var(--clr-white-2);
+  --bg-accent: var(--clr-purple);
+
+  /* font custom props */
+  --ff-main: "Poppins", sans-serif;
+
+  --fs-input: 2rem;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-bolder: 900;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 40rem) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  height: 100%;
+  font-family: var(--ff-main);
+  color: var(--text-body);
+  background-color: var(--bg-body);
+  /* for this app layout */
+  display: grid;
+  place-items: center;
+}
+@media (max-width: 40rem) {
+  body {
+    place-items: start;
+    padding-block: 10rem;
+  }
+}
+input {
+  font: inherit;
+}
+/* hide the arrow buttons from the number input */
+/* chrome & edge */
+input:where([type="number"])::-webkit-inner-spin-button {
+  display: none;
+}
+/* firefox */
+input:where([type="number"]) {
+  -moz-appearance: textfield;
+}

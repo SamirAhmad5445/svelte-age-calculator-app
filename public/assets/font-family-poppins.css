@@ -1,0 +1,41 @@
+/* Setup the self-hosting font • Poppins */
+/* Regular: 400 */
+@font-face {
+  src: local("Poppins"), local("poppins"), url("./fonts/Poppins-Regular.ttf");
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("Poppins"), local("poppins"), url("./fonts/Poppins-Italic.ttf");
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: italic;
+}
+/* Bold: 700 */
+@font-face {
+  src: local("Poppins"), local("poppins"), url("./fonts/Poppins-Bold.ttf");
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("Poppins"), local("poppins"), url("./fonts/Poppins-BoldItalic.ttf");
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: italic;
+}
+/* Extra Bold: 900 */
+@font-face {
+  src: local("Poppins"), local("poppins"), url("./fonts/Poppins-ExtraBold.ttf");
+  font-family: "Poppins";
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  src: local("Poppins"), local("poppins"),
+    url("./fonts/Poppins-ExtraBoldItalic.ttf");
+  font-family: "Poppins";
+  font-weight: 800;
+  font-style: italic;
+}
