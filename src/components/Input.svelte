@@ -8,12 +8,17 @@
   ];
   const handleAgeInput = (e) => {
     const inputData = `${e.target.month.value} ${e.target.day.value} ${e.target.year.value}`;
-    const curr = new Date();
-    const bd = new Date(inputData);
+    const today = new Date();
+    const birthday = new Date(inputData);
     $age = {
-      year: curr.getFullYear() - bd.getFullYear(),
-      month: curr.getMonth() - bd.getMonth() + ($age.day > 0 ? 1 : 0),
-      day: curr.getDate() - bd.getDate() + 1,
+      year:
+        today.getFullYear() -
+        birthday.getFullYear() -
+        (birthday.getMonth() > today.getMonth() ? 1 : 0),
+      month:
+        ((today.getMonth() + (12 - birthday.getMonth())) % 12) -
+        (birthday.getDate() > today.getDate() ? 1 : 0),
+      day: (today.getDate() + (30 - birthday.getDate())) % 30,
     };
   };
 </script>
